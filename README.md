@@ -17,8 +17,6 @@ N/A
 
 # Usage
 
-Through showing my skills with only three weeks of training, I hope this personal webpage would be a great addition to my future projects. For people to review and see my progress as this course continues.
-
 
 
 # Screeshots + Link
