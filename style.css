@@ -19,6 +19,19 @@ body{
     left: 25%;
     margin-top: 15%
 }
+.container1 h1{
+    font-size: 3rem;
+    font-weight: 300;
+    font-weight: bold;
+}
+.container1 p{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 2rem;
+    font-weight: 300;
+    border: solid;
+    width: 80%;
+}
 .timer{
     margin-top: 20px;
 }
@@ -32,7 +45,8 @@ body{
 
 
 
-#startQuiz{
+#startbtn{
+    font-size: 2rem;
     padding: 10px;
     border: none;
     border-radius: 7px;
@@ -41,7 +55,7 @@ body{
     cursor: pointer;
     transition: ease-in 300ms;
 }
-#startQuiz:hover{
+#startbtn:hover{
     background-color: rgb(161, 1, 161);
     opacity: 75%;
     transition: ease-in-out 300ms;
