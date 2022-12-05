@@ -1,14 +1,28 @@
 const Displaytime = document.getElementById("Displaytime");
-const startBtn = document.getElementById("startBtn");
-const resetBtn = documeent.getElementById("redo");
-const QuestionContainer = document.getElementById("QuestionContainer"); //shows questions after start
+const startBtn = document.getElementById("btnStart");
+const introPage = document.getElementById("intro");
+const QuestionContainer1 = document.getElementById("question1-container"); //shows questions after start
+const QuestionContainer2 = document.getElementById("question2-container");
+startBtn.addEventListener('click', StartQuiz);
 
-startBtn.addEventListener("click", start)
-
-
-function start(event){
-startBtn.classList.add('hide');
+function StartQuiz(){
+startBtn.classList.add("hide");
+introPage.classList.add("hide");
+QuestionContainer1.classList.remove("hide");
+timer();
 }
+
+//questions cycles through
+function question(){
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -20,10 +34,10 @@ function timer(){
         if(timer > 1){
             Displaytime.textContent = timer;
             timer--;
-        }else {
+        }     
+        else {
             Displaytime.textContent = '';
-
-            clearInterval(timetinterval);
+            clearInterval(timerinterval);
         }
     }, 1000);
 }

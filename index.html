@@ -7,19 +7,71 @@
     <title>Quiz</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    
+   
 </head>
 <body>
-    <div class="container1">
+    <div class="container">
     <div id="card-container" class="hide"></div>
+    <div id="intro">
     <h1>Coding Quiz Challenge</h1>
     <p class="introText">Try to answer the follow code-related questions within the time limit.
          Keep in mind that the incorrect answers will penalise your score/time by ten seconds!</p>
+    </div>
     
-    
-    <button id="startbtn">Start Quiz</button>
+<button id="btnStart" class="start-Btn">Start Quiz</button>
+<div class="Question-Container">
+<div id="question1-container" class="hide">
+<div id="question1">Question: What is the DOM?</div>
+<div id="answer-button" class="button-grid">
+    <button class="btn correct">1. Document Object Model</button>
+    <button class="btn wrong">2. Documentation Objects Model</button>
+    <button class="btn wrong">3. TV series</button>
+    <button class="btn wrong">4. Short for Dom Hemingway</button>
+</div>
+</div>
+<div id="question2-container" class="hide">
+<div id="question2">Question: How do you center a div?</div>
+<div id="answer-button" class="button-grid">
+    <button class="btn correct">1. You don't</button>
+    <button class="btn correct">2. Go on stackoverflow</button>
+    <button class="btn correct">3. Search Youtube</button>
+    <button class="btn correct">4. What is a div?</button>
+</div>
+</div>
+<div id="question3-container" class="hide">
+<div id="question3">Question: What does JS stand for?</div>
+<div id="answer-button" class="button-grid">
+    <button class="btn wrong">1. James Smith</button>
+    <button class="btn correct">2. Java Script</button>
+    <button class="btn wrong">3. Jerry Seinfeld</button>
+    <button class="btn wrong">4. Java Sip</button>
+</div>
+</div>
+<div id="question4-container" class="hide">
+<div id="question4">Question: Which one returns false?</div>
+<div id="answer-button" class="button-grid">
+    <button class="btn wrong">1. 0 == "0"</button>
+    <button class="btn wrong">2. 0 == []</button>
+    <button class="btn correct">3. "0" == []</button>
+    <button class="btn correct">4. This doesn't make sense</button>
+</div>
+</div>
+<div id="question5-container" class="hide">
+<div id="question5">Question: What is the output for this: ('b' + 'a' + + 'a' + 'a').toLowerCase();</div>
+<div id="answer-button" class="button-grid">
+    <button class="btn wrong">1. baaa</button>
+    <button class="btn wrong">2. BAAA</button>
+    <button class="btn correct">3. banana</button>
+    <button class="btn wrong">4. HelloWorld</button>
+</div>
+</div>
+</div>
 </div>
 <div id="Displaytime">Time: 75</div>
 <button id="redo" class="hide">Try Again?</button>
+
+
+
+<script src="script.js"></script>
 </body>
 </html>

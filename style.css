@@ -2,29 +2,54 @@
     margin: 0;
     font-family: sans-serif;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
     background-color: lightblue;
 }
-.container1{
-    justify-content: center;
-    max-width: 50%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+/*Container1*/
+.container{
+    
+    width:800px;
+    max-width: 80%;
     background-color: white;
-    border: solid;
-    position: relative;
-    left: 25%;
-    margin-top: 15%
+    padding: 10px;
+    border-radius: 10px;
 }
-.container1 h1{
+.button-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:10px;
+    margin: 20px 0;
+}
+.btn{
+    background-color: rgb(23, 23, 102);
+    border-radius: 10px;
+    width:30%;
+    height:40px;
+    font-size: 20px;
+    border: none;
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(161, 1, 161);
+    opacity: 75%;
+}
+.hide{/*hide containers*/
+    display: none;
+}
+
+
+.container h1{
     font-size: 3rem;
     font-weight: 300;
     font-weight: bold;
 }
-.container1 p{
+.container p{
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 2rem;
@@ -32,20 +57,8 @@ body{
     border: solid;
     width: 80%;
 }
-.timer{
-    margin-top: 20px;
-}
 
-
-
-
-
-
-
-
-
-
-#startbtn{
+#btnStart{
     font-size: 2rem;
     padding: 10px;
     border: none;
@@ -55,11 +68,15 @@ body{
     cursor: pointer;
     transition: ease-in 300ms;
 }
-#startbtn:hover{
+#btnStart:hover{
     background-color: rgb(161, 1, 161);
     opacity: 75%;
     transition: ease-in-out 300ms;
 }
+
+
+
+
 #redo{
     padding: 8px;
     border: none;
@@ -74,7 +91,6 @@ body{
     opacity: 75%;
     transition: ease-in-out 300ms;
 }
-
 
 #Displaytime{
     font-size: 25px;
