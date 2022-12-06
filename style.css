@@ -28,7 +28,7 @@ body{
     gap:10px;
     margin: 20px 0;
 }
-.btn{
+.correct,.wrong{
     background-color: rgb(23, 23, 102);
     border-radius: 10px;
     width:30%;
@@ -39,7 +39,7 @@ body{
     cursor: pointer;
     padding: 10px;
 }
-.btn:hover{
+.correct:hover,.wrong:hover{
     background-color: rgb(161, 1, 161);
     opacity: 75%;
 }
