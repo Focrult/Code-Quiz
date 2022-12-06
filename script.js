@@ -1,8 +1,8 @@
 const Displaytime = document.getElementById("Displaytime");
 const startBtn = document.getElementById("btnStart");
 const introPage = document.getElementById("intro");
-var correctAnswer = document.querySelector('.correct');
-var wrongAnswer = document.querySelector('.wrong');
+var correctAnswer = document.querySelector('.correct'); //bug foudn here
+var wrongAnswer = document.querySelector('.wrong'); //bug found here
 var timer = 75;
 const QuestionContainer1 = document.getElementById("question1-container"); //shows questions after start
 const QuestionContainer2 = document.getElementById("question2-container");
