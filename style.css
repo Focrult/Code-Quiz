@@ -22,6 +22,9 @@ body{
     align-items: center;
     text-align: center;
 }
+.hide{
+    display: none;
+}
 .button-grid{
     display: grid;
     grid-template-columns: 1fr;

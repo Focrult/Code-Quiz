@@ -1,10 +1,10 @@
 const Displaytime = document.getElementById("Displaytime");
 const startBtn = document.getElementById("btnStart");
 const introPage = document.getElementById("intro");
-const buttongrid = document.getElementsByClassName("button-grid");
 const correctAnswer = document.getElementsByClassName("correct"); //bug foudn here
-
 const wrongAnswer = document.getElementsByClassName("wrong"); //bug found here
+const textCorrect = document.getElementById("correct-text");
+const textWrong = document.getElementById("wrong-text");
 var timer = 75;
 var UserScore = 0;
 const QuestionContainer1 = document.getElementById("question1-container"); //shows questions after start
@@ -26,37 +26,42 @@ console.log("passing function in StartQuiz");
 function Question1(){
     var myFunction = function() {
         var attribute = this.getAttribute("data-myattribute");
-        console.log("correct Answer")
-    };
-    
+        console.log("correct Answer");
+        correctText();
+        QuestionContainer1.classList.add("hide");
+        QuestionContainer2.classList.remove("hide");
+        Question2()
+    }
     for (var i = 0; i < correctAnswer.length; i++) {
         correctAnswer[i].addEventListener('click', myFunction, false);
+        console.log("loop check")
     }
     var myFunction = function() {
         var attribute = this.getAttribute("data-myattribute");
         console.log("wrong answer")
+        wrongText();
+        QuestionContainer1.classList.add("hide");
+        QuestionContainer2.classList.remove("hide");
+        Question2()
     };
     for (var i = 0; i < wrongAnswer.length; i++) {
         wrongAnswer[i].addEventListener('click', myFunction, false);
     }
 }
-function Question2(){
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("correct Answer")
-    };
-    
-    for (var i = 0; i < correctAnswer.length; i++) {
-        correctAnswer[i].addEventListener('click', myFunction, false);
-    }
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("wrong answer")
-    };
-    for (var i = 0; i < wrongAnswer.length; i++) {
-        wrongAnswer[i].addEventListener('click', myFunction, false);
-    }
-}
+ 
+
+//     var myFunction = function() {
+//         var attribute = this.getAttribute("data-myattribute");
+//         console.log("wrong answer")
+//         wrongText(); 
+//     QuestionContainer1.classList.add("hide");
+//     QuestionContainer2.classList.remove("hide");
+//     Question2(); 
+//     };
+//     for (var i = 0; i < wrongAnswer.length; i++) {
+//         wrongAnswer[i].addEventListener('click', myFunction, false);
+//     }
+// }
 
 
 // function Question1(){
@@ -89,23 +94,28 @@ function Question2(){
 // }
 ///////////////////////////////////////////////////////////////////////////
 function Question2(){
-        correctAnswer.addEventListener('click', function(){
-        console.log("test start of Q2")
+    var myFunction = function() {
+        var attribute = this.getAttribute("data-myattribute");
+        console.log("correct Answer");
         correctText();
         QuestionContainer2.classList.add("hide");
         QuestionContainer3.classList.remove("hide");
-        Question3(); 
-        console.log("testRightQ2");
-        });
-        
-        wrongAnswer.addEventListener('click', function(){
-            wrongText();
-            QuestionContainer2.classList.add("hide");
-            QuestionContainer3.classList.remove("hide");
-            Question3(); 
-            console.log("testWrongQ2");
-            });
-        }
+    }
+    for (var i = 0; i < correctAnswer.length; i++) {
+        correctAnswer[i].addEventListener('click', myFunction, false);
+        console.log("loop check")
+    }
+    var myFunction = function() {
+        var attribute = this.getAttribute("data-myattribute");
+        console.log("wrong answer")
+        wrongText();
+        QuestionContainer2.classList.add("hide");
+        QuestionContainer3.classList.remove("hide");
+    };
+    for (var i = 0; i < wrongAnswer.length; i++) {
+        wrongAnswer[i].addEventListener('click', myFunction, false);
+    }
+}
 ///////////////////////////////////////////////////////////////////////////
 function Question3(){
     correctAnswer.addEventListener('click', function(){
@@ -171,12 +181,13 @@ function Final(){
 
 //function for wrong/correct answer text!
 function correctText(){
-    correctAnswer.classList.remove("hide"); 
+    textCorrect.classList.remove("hide"); 
+    textCorrect.classList.add("hide");
     console.log("function correctText");
 }
     //store one point in LS.  into an empty array?
 function wrongText(){
-    wrongAnswer.classList.remove("hide");
+    textWrong.classList.remove("hide");
     timer -= 10;//penalty of 10seconds
     console.log("function wrongText");
 }
