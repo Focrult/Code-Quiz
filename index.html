@@ -10,6 +10,8 @@
    
 </head>
 <body>
+    <h1 id="correct-text" class="hide">Correct!</h1>
+    <h1 id="wrong-text" class="hide">Wrong!</h1>
     <div class="container">
     <div id="card-container" class="hide"></div>
     <div id="intro">
@@ -17,31 +19,34 @@
     <p class="introText">Try to answer the follow code-related questions within the time limit.
          Keep in mind that the incorrect answers will penalise your score/time by ten seconds!</p>
     </div>
-    <div id="correct-text" class="hide">Correct!</div>
-    <div id="wrong-text" class="hide">Wrong!</div>
+   
     <button id="btnStart" class="start-Btn">Start Quiz</button>
     <div class="Question-Container">
 
+
+<!--Question 1 Card-->
 <div id="question1-container" class="hide">
 <div id="question1">Question: What is the DOM?</div>
 <div id="answer-button" class="button-grid">
     <button class="correct">1. Document Object Model</button>
-    <button class="correct">2. Documentation Objects Model</button>
+    <button class="wrong">2. Documentation Objects Model</button>
     <button class="wrong">3. TV series</button>
     <button class="wrong">4. None of these</button>
 </div>
 </div>
 
-<div id="question2-container" class="hide">
-<div id="question2">Question: How do you center a div?</div>
-<div id="answer-button" class="button-grid">
-    <button class="correct">1. You don't</button>
-    <button class="correct">2. Go on stackoverflow</button>
-    <button class="correct">3. Search Youtube</button>
-    <button class="correct">4. What is a div?</button>
-</div>
-</div>
 
+<!--Question 2 Card-->
+<div id="question2-container" class="hide">
+<div id="question2">What is HTML</div>
+<div id="answer-button" class="button-grid">
+    <button class="correct">1. HTML is used to style things</button>
+    <button class="wrong">2. It is the structure of your webpage</button>
+    <button class="correct">3. It's is called JavaScript</button>
+    <button class="correct">4. </button>
+</div>
+</div>
+<!--Question 3 Card-->
 <div id="question3-container" class="hide">
 <div id="question3">Question: What does JS stand for?</div>
 <div id="answer-button" class="button-grid">
@@ -51,7 +56,7 @@
     <button class="wrong">4. Java Sip</button>
 </div>
 </div>
-
+<!--Question 4 Card-->
 <div id="question4-container" class="hide">
 <div id="question4">Question: Which one returns false?</div>
 <div id="answer-button" class="button-grid">
@@ -61,7 +66,7 @@
     <button class="correct">4. This doesn't make sense</button>
 </div>
 </div>
-
+<!--Question 5 Card-->
 <div id="question5-container" class="hide">
 <div id="question5">Question: What is the output for this: ('b' + 'a' + + 'a' + 'a').toLowerCase();</div>
 <div id="answer-button" class="button-grid">

@@ -43,6 +43,25 @@ body{
     background-color: rgb(161, 1, 161);
     opacity: 75%;
 }
+#correct-text{
+    font-size: 50px;
+    color: green;
+    text-align: center;
+    position: relative;
+    top: 600px;
+    right: 300px;
+}
+#wrong-text{
+    font-size: 50px;
+    color: red;
+    text-align: center;
+    position: relative;
+    top: 600px;
+    right: 300px;
+   
+}
+
+
 .hide{/*hide containers*/
     display: none;
 }

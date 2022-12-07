@@ -1,20 +1,18 @@
 const Displaytime = document.getElementById("Displaytime");
 const startBtn = document.getElementById("btnStart");
 const introPage = document.getElementById("intro");
-var correctAnswer = document.querySelector('.correct'); //bug foudn here
-var wrongAnswer = document.querySelector('.wrong'); //bug found here
+const buttongrid = document.getElementsByClassName("button-grid");
+const correctAnswer = document.getElementsByClassName("correct"); //bug foudn here
+
+const wrongAnswer = document.getElementsByClassName("wrong"); //bug found here
 var timer = 75;
+var UserScore = 0;
 const QuestionContainer1 = document.getElementById("question1-container"); //shows questions after start
 const QuestionContainer2 = document.getElementById("question2-container");
 const QuestionContainer3 = document.getElementById("question3-container");
 const QuestionContainer4 = document.getElementById("question4-container");
 const QuestionContainer5 = document.getElementById("question5-container");
 startBtn.addEventListener('click', StartQuiz);
-// QuestionContainer1.addEventListener('click', Question1);
-// QuestionContainer2.addEventListener('click', Question2);
-// QuestionContainer3.addEventListener('click', Question3);
-// QuestionContainer4.addEventListener('click', Question4);
-// QuestionContainer5.addEventListener('click', Question5);
 
 function StartQuiz(){
 startBtn.classList.add("hide");
@@ -22,38 +20,82 @@ introPage.classList.add("hide");
 QuestionContainer1.classList.remove("hide");
 timerCount();
 Question1();
+console.log("passing function in StartQuiz");
 }
 
-
-
-//function
 function Question1(){
-correctAnswer.addEventListener('click', function(){
-
-correctText();
-QuestionContainer1.classList.add("hide");
-QuestionContainer2.classList.remove("hide");
-Question2(); 
-console.log("testRight");
-});
-
-wrongAnswer.addEventListener('click', function(){
-    wrongText();
-    QuestionContainer1.classList.add("hide");
-    QuestionContainer2.classList.remove("hide");
-    Question2(); 
-    console.log("testWrong");
-    });
+    var myFunction = function() {
+        var attribute = this.getAttribute("data-myattribute");
+        console.log("correct Answer")
+    };
+    
+    for (var i = 0; i < correctAnswer.length; i++) {
+        correctAnswer[i].addEventListener('click', myFunction, false);
+    }
+    var myFunction = function() {
+        var attribute = this.getAttribute("data-myattribute");
+        console.log("wrong answer")
+    };
+    for (var i = 0; i < wrongAnswer.length; i++) {
+        wrongAnswer[i].addEventListener('click', myFunction, false);
+    }
 }
+function Question2(){
+    var myFunction = function() {
+        var attribute = this.getAttribute("data-myattribute");
+        console.log("correct Answer")
+    };
+    
+    for (var i = 0; i < correctAnswer.length; i++) {
+        correctAnswer[i].addEventListener('click', myFunction, false);
+    }
+    var myFunction = function() {
+        var attribute = this.getAttribute("data-myattribute");
+        console.log("wrong answer")
+    };
+    for (var i = 0; i < wrongAnswer.length; i++) {
+        wrongAnswer[i].addEventListener('click', myFunction, false);
+    }
+}
+
+
+// function Question1(){
+// correctAnswer.addEventListener('click', function(){ 
+// if(correctAnswer !== null){                                                                             
+// correctText();
+// QuestionContainer1.classList.add("hide");
+// QuestionContainer2.classList.remove("hide");
+// Question2(); 
+// console.log("testRightQ1");
+// }
+// else{
+//     wrongText(); 
+//     QuestionContainer1.classList.add("hide");
+//     QuestionContainer2.classList.remove("hide");
+//     Question2(); 
+//     console.log("testWrongQ1");
+// }
+// });
+// }
+// wrongAnswer.addEventListener('click', function(){
+//     if(wrongAnswer=== null){
+//     wrongText(); 
+//     QuestionContainer1.classList.add("hide");
+//     QuestionContainer2.classList.remove("hide");
+//     Question2(); 
+//     console.log("testWrongQ1");
+//     }
+//     });
+// }
 ///////////////////////////////////////////////////////////////////////////
 function Question2(){
-    correctAnswer.addEventListener('click', function(){
-
+        correctAnswer.addEventListener('click', function(){
+        console.log("test start of Q2")
         correctText();
         QuestionContainer2.classList.add("hide");
         QuestionContainer3.classList.remove("hide");
         Question3(); 
-        console.log("testRight");
+        console.log("testRightQ2");
         });
         
         wrongAnswer.addEventListener('click', function(){
@@ -61,7 +103,7 @@ function Question2(){
             QuestionContainer2.classList.add("hide");
             QuestionContainer3.classList.remove("hide");
             Question3(); 
-            console.log("testWrong");
+            console.log("testWrongQ2");
             });
         }
 ///////////////////////////////////////////////////////////////////////////
@@ -71,14 +113,14 @@ function Question3(){
         QuestionContainer3.classList.add("hide");
         QuestionContainer4.classList.remove("hide");
         Question4(); 
-        console.log("testRight");
+        console.log("testRightQ3");
         });
         wrongAnswer.addEventListener('click', function(){
         wrongText();
         QuestionContainer3.classList.add("hide");
         QuestionContainer4.classList.remove("hide");
         Question4(); 
-        console.log("testWrong");
+        console.log("testWrongQ3");
          });
         }
 ///////////////////////////////////////////////////////////////////////////
@@ -88,14 +130,14 @@ function Question4(){
         QuestionContainer4.classList.add("hide");
         QuestionContainer5.classList.remove("hide");
         Question5(); 
-        console.log("testRight");
+        console.log("testRightQ4");
         });
         wrongAnswer.addEventListener('click', function(){
         wrongText();
         QuestionContainer4.classList.add("hide");
         QuestionContainer5.classList.remove("hide");
         Question5(); 
-        console.log("testWrong");
+        console.log("testWrongQ4");
          });
         }
 ///////////////////////////////////////////////////////////////////////////
@@ -105,25 +147,22 @@ function Question5(){
         QuestionContainer5.classList.add("hide");
         QuestionContainer5.classList.remove("hide");
         Final(); 
-        console.log("testRight");
+        console.log("testRightQ5");
         });
         wrongAnswer.addEventListener('click', function(){
         wrongText();
         QuestionContainer5.classList.add("hide");
         QuestionContainer5.classList.remove("hide");
         Final(); 
-        console.log("testWrong");
+        console.log("testWrongQ5");
          });
         }
 
 
 
-
-//QuestionContainer2.addEventListener('click',
-//event listener for clicking on class .correct and .wrong?
-//if user clicks on correct +1 point
-
 function Final(){
+    //section with score + Try Again?
+    //record TIMEstamp
     console.log("TESTING FINAL");
 }
 
@@ -133,13 +172,13 @@ function Final(){
 //function for wrong/correct answer text!
 function correctText(){
     correctAnswer.classList.remove("hide"); 
-    return;
+    console.log("function correctText");
 }
     //store one point in LS.  into an empty array?
 function wrongText(){
     wrongAnswer.classList.remove("hide");
     timer -= 10;//penalty of 10seconds
-    return;
+    console.log("function wrongText");
 }
    
  
