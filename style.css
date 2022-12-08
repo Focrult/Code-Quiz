@@ -50,18 +50,17 @@ body{
     font-size: 50px;
     color: green;
     text-align: center;
-    position: relative;
-    top: 600px;
-    right: 300px;
+    position: absolute;
+    top: 80%;
+    right: 60%;
 }
 #wrong-text{
     font-size: 50px;
     color: red;
     text-align: center;
-    position: relative;
-    top: 600px;
-    right: 300px;
-   
+    position: absolute;
+    top: 80%;
+    right: 60%;
 }
 
 
