@@ -54,8 +54,44 @@ WA3.addEventListener('click', function(){
     Question2()
     console.log("testWA3")
 });
-
 }
+
+function Question2(){
+    let CA2 = document.getElementById("correct2");
+    let WA4 = document.getElementById("wrong4");
+    let WA5 = document.getElementById("wrong5");
+    let WA6 = document.getElementById("wrong6");
+
+    CA2.addEventListener('click', function(){
+        correctText();
+        QuestionContainer1.classList.add("hide");
+        QuestionContainer2.classList.remove("hide");
+        Question3()
+        console.log("testCA1")
+    });
+    WA4.addEventListener('click', function(){
+        wrongText();
+        QuestionContainer1.classList.add("hide");
+        QuestionContainer2.classList.remove("hide");
+        Question3()
+        console.log("testWA1")
+    });
+    WA5.addEventListener('click', function(){
+    wrongText();
+    QuestionContainer1.classList.add("hide");
+    QuestionContainer2.classList.remove("hide");
+    Question3()
+    console.log("testWA2")
+    });
+    WA6.addEventListener('click', function(){
+    wrongText();
+    QuestionContainer1.classList.add("hide");
+    QuestionContainer2.classList.remove("hide");
+    Question3()
+    console.log("testWA3")
+    });
+
+    }
 
 // function Question1(){
 //     var myFunction1 = function() {
@@ -85,116 +121,114 @@ WA3.addEventListener('click', function(){
         
 //     }
 // }
-
-
  
 ///////////////////////////////////////////////////////////////////////////
-function Question2(){
-    textCorrect.classList.add("hide");
-    textWrong.classList.add("hide");
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("correct Answer");
-        correctText();
-        QuestionContainer2.classList.add("hide");
-        QuestionContainer3.classList.remove("hide");
-        Question3();
-    }
-    for (var i = 0; i < correctAnswer.length; i++) {
-        correctAnswer[i].addEventListener('click', myFunction, false);
-        console.log("loop checkC2")
-    }
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("wrong answer")
-        wrongText();
-        QuestionContainer2.classList.add("hide");
-        QuestionContainer3.classList.remove("hide");
-        Question3();
-    };
-    for (var i = 0; i < wrongAnswer.length; i++) {
-        wrongAnswer[i].addEventListener('click', myFunction, false);
-        console.log("loop checkW2")
-    }
-}
+// function Question2(){
+//     textCorrect.classList.add("hide");
+//     textWrong.classList.add("hide");
+//     var myFunction = function() {
+//         var attribute = this.getAttribute("data-myattribute");
+//         console.log("correct Answer");
+//         correctText();
+//         QuestionContainer2.classList.add("hide");
+//         QuestionContainer3.classList.remove("hide");
+//         Question3();
+//     }
+//     for (var i = 0; i < correctAnswer.length; i++) {
+//         correctAnswer[i].addEventListener('click', myFunction, false);
+//         console.log("loop checkC2")
+//     }
+//     var myFunction = function() {
+//         var attribute = this.getAttribute("data-myattribute");
+//         console.log("wrong answer")
+//         wrongText();
+//         QuestionContainer2.classList.add("hide");
+//         QuestionContainer3.classList.remove("hide");
+//         Question3();
+//     };
+//     for (var i = 0; i < wrongAnswer.length; i++) {
+//         wrongAnswer[i].addEventListener('click', myFunction, false);
+//         console.log("loop checkW2")
+//     }
+// }
 ///////////////////////////////////////////////////////////////////////////
-function Question3(){
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("correct Answer");
-        correctText();
-        QuestionContainer3.classList.add("hide");
-        QuestionContainer4.classList.remove("hide");
-        Question4();
-    }
-    for (var i = 0; i < correctAnswer.length; i++) {
-        correctAnswer[i].addEventListener('click', myFunction, false);
-        console.log("loop check")
-    }
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("wrong answer")
-        wrongText();
-        QuestionContainer3.classList.add("hide");
-        QuestionContainer4.classList.remove("hide");
-        Question4();
-    };
-    for (var i = 0; i < wrongAnswer.length; i++) {
-        wrongAnswer[i].addEventListener('click', myFunction, false);
-    }
-        }
+// function Question3(){
+//     var myFunction = function() {
+//         var attribute = this.getAttribute("data-myattribute");
+//         console.log("correct Answer");
+//         correctText();
+//         QuestionContainer3.classList.add("hide");
+//         QuestionContainer4.classList.remove("hide");
+//         Question4();
+//     }
+//     for (var i = 0; i < correctAnswer.length; i++) {
+//         correctAnswer[i].addEventListener('click', myFunction, false);
+//         console.log("loop check")
+//     }
+//     var myFunction = function() {
+//         var attribute = this.getAttribute("data-myattribute");
+//         console.log("wrong answer")
+//         wrongText();
+//         QuestionContainer3.classList.add("hide");
+//         QuestionContainer4.classList.remove("hide");
+//         Question4();
+//     };
+//     for (var i = 0; i < wrongAnswer.length; i++) {
+//         wrongAnswer[i].addEventListener('click', myFunction, false);
+//     }
+//         }
 ///////////////////////////////////////////////////////////////////////////
-function Question4(){
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("correct Answer");
-        correctText();
-        QuestionContainer4.classList.add("hide");
-        QuestionContainer5.classList.remove("hide");
-        Question5();
-    }
-    for (var i = 0; i < correctAnswer.length; i++) {
-        correctAnswer[i].addEventListener('click', myFunction, false);
-        console.log("loop check")
-    }
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("wrong answer")
-        wrongText();
-        QuestionContainer4.classList.add("hide");
-        QuestionContainer5.classList.remove("hide");
-        Question5();
-    };
-    for (var i = 0; i < wrongAnswer.length; i++) {
-        wrongAnswer[i].addEventListener('click', myFunction, false);
-    }
-        }
+// function Question4(){
+//     var myFunction = function() {
+//         var attribute = this.getAttribute("data-myattribute");
+//         console.log("correct Answer");
+//         correctText();
+//         QuestionContainer4.classList.add("hide");
+//         QuestionContainer5.classList.remove("hide");
+//         Question5();
+//     }
+//     for (var i = 0; i < correctAnswer.length; i++) {
+//         correctAnswer[i].addEventListener('click', myFunction, false);
+//         console.log("loop check")
+//     }
+//     var myFunction = function() {
+//         var attribute = this.getAttribute("data-myattribute");
+//         console.log("wrong answer")
+//         wrongText();
+//         QuestionContainer4.classList.add("hide");
+//         QuestionContainer5.classList.remove("hide");
+//         Question5();
+//     };
+//     for (var i = 0; i < wrongAnswer.length; i++) {
+//         wrongAnswer[i].addEventListener('click', myFunction, false);
+//     }
+//         }
 ///////////////////////////////////////////////////////////////////////////
-function Question5(){
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("correct Answer");
-        correctText();
-        QuestionContainer5.classList.add("hide");
-        QuestionContainer3.classList.remove("hide");
-        Final()
-    }
-    for (var i = 0; i < correctAnswer.length; i++) {
-        correctAnswer[i].addEventListener('click', myFunction, false);
-        console.log("loop check")
-    }
-    var myFunction = function() {
-        var attribute = this.getAttribute("data-myattribute");
-        console.log("wrong answer")
-        wrongText();
-        QuestionContainer5.classList.add("hide");
-        QuestionContainer3.classList.remove("hide");
-        Final()
-    };
-    for (var i = 0; i < wrongAnswer.length; i++) {
-        wrongAnswer[i].addEventListener('click', myFunction, false);
-    }
-        }
+// function Question5(){
+//     var myFunction = function() {
+//         var attribute = this.getAttribute("data-myattribute");
+//         console.log("correct Answer");
+//         correctText();
+//         QuestionContainer5.classList.add("hide");
+//         QuestionContainer3.classList.remove("hide");
+//         Final()
+//     }
+//     for (var i = 0; i < correctAnswer.length; i++) {
+//         correctAnswer[i].addEventListener('click', myFunction, false);
+//         console.log("loop check")
+//     }
+//     var myFunction = function() {
+//         var attribute = this.getAttribute("data-myattribute");
+//         console.log("wrong answer")
+//         wrongText();
+//         QuestionContainer5.classList.add("hide");
+//         QuestionContainer3.classList.remove("hide");
+//         Final()
+//     };
+//     for (var i = 0; i < wrongAnswer.length; i++) {
+//         wrongAnswer[i].addEventListener('click', myFunction, false);
+//     }
+//         }
 
 
 
