@@ -19,6 +19,7 @@ var submitBtn2 = document.querySelector("#submitBtn");
 var submitBtn = document.querySelector("#msg");
 var initialSpan = document.querySelector("#user-initials");
 var scoreSpan = document.querySelector("#user-score");
+var currentScoreSpan = document.querySelector("#current-score");
 
 
 ////////
@@ -225,7 +226,10 @@ function Final(){
     QuestionContainer4.classList.add("hide");
     QuestionContainer5.classList.add("hide");
     FinalContainer.classList.remove("hide");
+    // currentscore()
+    currentScoreSpan.textContent = score;
     cardbody.classList.remove("hide");
+
     clearInterval(seconds);
     previousScore();
     startBtn.innerText = 'Restart Quiz';
@@ -239,6 +243,7 @@ function displayMessage(type, message){
     submitBtn.textContent = message;
     submitBtn.setAttribute("class", type);
 }
+
 function previousScore(){
     var initials = localStorage.getItem("initials");
     var prescore = localStorage.getItem("score");
