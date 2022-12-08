@@ -7,7 +7,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: lightblue;
+
 }
 /*Container1*/
 .container{
@@ -16,11 +16,19 @@ body{
     max-width: 80%;
     background-color: white;
     padding: 10px;
-    border-radius: 10px;
-    border: solid;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+#question1-container,
+#question2-container,
+#question3-container,
+#question4-container,
+#question5-container{
+font-size: 20px;
+font-weight: bold;
+
+
 }
 .hide{
     display: none;
@@ -31,7 +39,10 @@ body{
     gap:10px;
     margin: 20px 0;
 }
-.correct,.wrong{
+#correct1,#correct2,#correct3,#correct4,#correct45,#correct5,
+#wrong1, #wrong2, #wrong3, #wrong4, #wrong5, 
+#wrong6, #wrong7, #wrong8, #wrong9, #wrong10, 
+#wrong11, #wrong13, #wrong14, #wrong15{
     background-color: rgb(23, 23, 102);
     border-radius: 10px;
     width:30%;
@@ -42,28 +53,40 @@ body{
     cursor: pointer;
     padding: 10px;
 }
-.correct:hover,.wrong:hover{
+#correct1:hover,#correct2:hover,#correct3:hover,
+#correct4:hover,#correct45:hover,#correct5:hover,
+#wrong1:hover, #wrong2:hover, #wrong3:hover, 
+#wrong4:hover, #wrong5:hover, #wrong6:hover, 
+#wrong7:hover, #wrong8:hover, #wrong9:hover, 
+#wrong10:hover, #wrong11:hover, #wrong13:hover, 
+#wrong14:hover, #wrong15:hover{
     background-color: rgb(161, 1, 161);
     opacity: 75%;
 }
-#correct-text{
-    font-size: 50px;
-    color: green;
-    text-align: center;
+
+.card2{
+    bottom: 75%;
+    left: 25%;
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
     position: absolute;
-    top: 80%;
-    right: 60%;
 }
-#wrong-text{
-    font-size: 50px;
-    color: red;
-    text-align: center;
-    position: absolute;
-    top: 80%;
-    right: 60%;
+#submit-b{
+    background-color: rgb(23, 23, 102);
+    border-radius: 10px;
+    width:30%;
+    height: 75px;
+    font-size: 20px;
+    border: none;
+    color: grey;
+    cursor: pointer;
+    padding: 10px;
+    border: solid;
 }
 
-
+  
+  
 .hide{/*hide containers*/
     display: none;
 }

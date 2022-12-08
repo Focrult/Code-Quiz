@@ -3,12 +3,24 @@ const startBtn = document.getElementById("btnStart");
 const introPage = document.getElementById("intro");
 const textCorrect = document.getElementById("correct-text");
 const textWrong = document.getElementById("wrong-text");
-var timer = 75;
+let timer = 75;
+var score = 0;
+var seconds;
+var highScores = document.querySelector('.highScores');
 const QuestionContainer1 = document.getElementById("question1-container"); //shows questions after start
 const QuestionContainer2 = document.getElementById("question2-container");
 const QuestionContainer3 = document.getElementById("question3-container");
 const QuestionContainer4 = document.getElementById("question4-container");
 const QuestionContainer5 = document.getElementById("question5-container");
+const FinalContainer = document.getElementById("final-container");
+const cardbody = document.getElementById("card-body");
+var initialInput = document.querySelector("#initials");
+var submitBtn2 = document.querySelector("#submitBtn");
+var submitBtn = document.querySelector("#msg");
+var initialSpan = document.querySelector("#user-initials");
+var scoreSpan = document.querySelector("#user-score");
+
+
 ////////
 startBtn.addEventListener('click', StartQuiz);
 function StartQuiz(){
@@ -27,28 +39,29 @@ function Question1(){
     let WA3 = document.getElementById("wrong3");
 
     CA1.addEventListener('click', function(){
-        correctText();
+        
+        score += 1;
         QuestionContainer1.classList.add("hide");
         QuestionContainer2.classList.remove("hide");
         Question2()
         console.log("testCA1")
     });
     WA1.addEventListener('click', function(){
-        wrongText();
+        wrongText()
         QuestionContainer1.classList.add("hide");
         QuestionContainer2.classList.remove("hide");
         Question2()
         console.log("testWA1")
 });
 WA2.addEventListener('click', function(){
-    wrongText();
+    wrongText()
     QuestionContainer1.classList.add("hide");
     QuestionContainer2.classList.remove("hide");
     Question2()
     console.log("testWA2")
 });
 WA3.addEventListener('click', function(){
-    wrongText();
+    wrongText()
     QuestionContainer1.classList.add("hide");
     QuestionContainer2.classList.remove("hide");
     Question2()
@@ -61,30 +74,31 @@ function Question2(){
     let WA4 = document.getElementById("wrong4");
     let WA5 = document.getElementById("wrong5");
     let WA6 = document.getElementById("wrong6");
-
+    textWrong.classList.add("hide");
     CA2.addEventListener('click', function(){
-        correctText();
+        
         QuestionContainer2.classList.add("hide");
         QuestionContainer3.classList.remove("hide");
         Question3()
         console.log("testCA1")
+        score += 1;
     });
     WA4.addEventListener('click', function(){
-        wrongText();
+        wrongText()
         QuestionContainer2.classList.add("hide");
         QuestionContainer3.classList.remove("hide");
         Question3()
         console.log("testWA1")
     });
     WA5.addEventListener('click', function(){
-    wrongText();
+        wrongText()
     QuestionContainer2.classList.add("hide");
     QuestionContainer3.classList.remove("hide");
     Question3()
     console.log("testWA2")
     });
     WA6.addEventListener('click', function(){
-    wrongText();
+        wrongText()
     QuestionContainer2.classList.add("hide");
     QuestionContainer3.classList.remove("hide");
     Question3()
@@ -92,35 +106,36 @@ function Question2(){
     });
     }
     ///////////////////////////////
-    function Question3(){
-        let CA3 = document.getElementById("correct3");
-        let WA7 = document.getElementById("wrong7");
-        let WA8 = document.getElementById("wrong8");
-        let WA9 = document.getElementById("wrong9");
+function Question3(){
+    let CA3 = document.getElementById("correct3");
+    let WA7 = document.getElementById("wrong7");
+    let WA8 = document.getElementById("wrong8");
+    let WA9 = document.getElementById("wrong9");
     
         CA3.addEventListener('click', function(){
-            correctText();
+           
             QuestionContainer3.classList.add("hide");
             QuestionContainer4.classList.remove("hide");
+            score += 1;
             Question4()
             console.log("testCA1")
         });
         WA7.addEventListener('click', function(){
-            wrongText();
+            wrongText()
             QuestionContainer3.classList.add("hide");
             QuestionContainer4.classList.remove("hide");
             Question4()
             console.log("testWA1")
         });
         WA8.addEventListener('click', function(){
-        wrongText();
+            wrongText()
         QuestionContainer3.classList.add("hide");
         QuestionContainer4.classList.remove("hide");
         Question4()
         console.log("testWA2")
         });
         WA9.addEventListener('click', function(){
-        wrongText();
+            wrongText()
         QuestionContainer3.classList.add("hide");
         QuestionContainer4.classList.remove("hide");
         Question4()
@@ -128,35 +143,37 @@ function Question2(){
         });
         }
         ///////////////////////////////
-        function Question4(){
-            let CA4 = document.getElementById("correct4");
-            let CA45 = document.getElementById("correct4.5");
-            let WA10 = document.getElementById("wrong10");
-            let WA11 = document.getElementById("wrong11");
+function Question4(){
+    let CA4 = document.getElementById("correct4");
+    let CA45 = document.getElementById("correct45");
+    let WA10 = document.getElementById("wrong10");
+    let WA11 = document.getElementById("wrong11");
         
             CA4.addEventListener('click', function(){
-                correctText();
+               
                 QuestionContainer4.classList.add("hide");
                 QuestionContainer5.classList.remove("hide");
+                score += 1;
                 Question5()
-                console.log("testCA1")
+                console.log("testCA1")  
             });
             CA45.addEventListener('click', function(){
-                correctText();
+                
                 QuestionContainer4.classList.add("hide");
                 QuestionContainer5.classList.remove("hide");
                 Question5()
                 console.log("testCA1")
+                score += 1;
             });
             WA10.addEventListener('click', function(){
-                wrongText();
+                wrongText()
                 QuestionContainer4.classList.add("hide");
                 QuestionContainer5.classList.remove("hide");
                 Question5()
                 console.log("testWA1")
             });
             WA11.addEventListener('click', function(){
-            wrongText();
+                wrongText()
             QuestionContainer4.classList.add("hide");
             QuestionContainer5.classList.remove("hide");
             Question5()
@@ -164,35 +181,36 @@ function Question2(){
             });
             }
             ///////////////////////////////
-            function Question5(){
-                let CA5 = document.getElementById("correct5");
-                let WA13 = document.getElementById("wrong13");
-                let WA14 = document.getElementById("wrong14");
-                let WA15 = document.getElementById("wrong15");
+function Question5(){
+    let CA5 = document.getElementById("correct5");
+    let WA13 = document.getElementById("wrong13");
+    let WA14 = document.getElementById("wrong14");
+    let WA15 = document.getElementById("wrong15");
             
                 CA5.addEventListener('click', function(){
-                    correctText();
+                    
                     QuestionContainer5.classList.add("hide");
                     QuestionContainer2.classList.remove("hide");
                     Final()
                     console.log("testCA1")
+                    score += 1;
                 });
                 WA13.addEventListener('click', function(){
-                    wrongText();
+                    wrongText()
                     QuestionContainer5.classList.add("hide");
                     QuestionContainer2.classList.remove("hide");
                     Final()
                     console.log("testWA1")
                 });
                 WA14.addEventListener('click', function(){
-                wrongText();
+                    wrongText()
                 QuestionContainer5.classList.add("hide");
                 QuestionContainer2.classList.remove("hide");
                 Final()
-                console.log("testWA2")
+                
                 });
                 WA15.addEventListener('click', function(){
-                wrongText();
+                    wrongText()
                 QuestionContainer5.classList.add("hide");
                 QuestionContainer2.classList.remove("hide");
                 Final()
@@ -200,15 +218,51 @@ function Question2(){
                 });
                 }
 ///////////////////////////////
-
-
-
 function Final(){
-    //section with score + Try Again?
-    //record TIMEstamp
-    console.log("TESTING FINAL");
+    QuestionContainer1.classList.add("hide");
+    QuestionContainer2.classList.add("hide");
+    QuestionContainer3.classList.add("hide");
+    QuestionContainer4.classList.add("hide");
+    QuestionContainer5.classList.add("hide");
+    FinalContainer.classList.remove("hide");
+    cardbody.classList.remove("hide");
+    clearInterval(seconds);
+    previousScore();
+    startBtn.innerText = 'Restart Quiz';
+    startBtn.classList.remove("hide");
+    startBtn.addEventListener('click', function(){ 
+       location.reload(); //reload page + timer
+    });
 }
 
+function displayMessage(type, message){
+    submitBtn.textContent = message;
+    submitBtn.setAttribute("class", type);
+}
+function previousScore(){
+    var initials = localStorage.getItem("initials");
+    var prescore = localStorage.getItem("score");
+    if(!initials || !prescore){
+        return;
+    }
+    initialSpan.textContent = initials;
+    scoreSpan.textContent = prescore;
+}
+submitBtn2.addEventListener("click", function(event){
+    event.preventDefault();
+    var initials = document.querySelector("#initials").value;
+    // var prescore = document.querySelector("#score").value;
+    if(initials === ""){
+        displayMessage("error", "Please enter your initials");
+    }else{
+        displayMessage("Info Recorded!");
+        localStorage.setItem("initials", initials);
+   
+        localStorage.setItem("score", score);
+        previousScore();
+        location.reload();
+    }
+});
 
 
 
@@ -218,28 +272,24 @@ function correctText(){
    
     console.log("function correctText");
 }
-    //store one point in LS.  into an empty array?
 function wrongText(){
-    textWrong.classList.remove("hide");
-
+    timer -= 10;
     //penalty of 10seconds
     console.log("function wrongText");
 }
-   
  
 
 //timer function countdown
 function timerCount(){
-    secs = setInterval(() => {
+    seconds = setInterval(function() {
     timer--;
     Displaytime.textContent = timer;
-    if (timer == 0) {
-        clearInterval(secs);
-        //input display 
+    if (timer === 0) {
+        clearInterval(seconds);
         Final();
     }
     if(timer < 0){
-        clearInterval(secs);
+        clearInterval(seconds);
         Final();
     }
     },1000);

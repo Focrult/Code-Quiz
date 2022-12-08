@@ -37,17 +37,17 @@
 
 <!--Question 2 Card-->
 <div id="question2-container" class="hide">
-<div id="question2">What is HTML</div>
+<div id="question2">What is the purpose for HTML?</div>
 <div id="answer-button" class="button-grid">
-    <button id="correct2">1. HTML is used to style things</button>
-    <button id="wrong4">2. It is the structure of your webpage</button>
-    <button id="wrong5">3. It's is called JavaScript</button>
-    <button id="wrong6">4. </button>
+    <button id="wrong4">1. HTML is used to style things</button>
+    <button id="correct2">2. It is the structure of your webpage</button>
+    <button id="wrong5">3. It's another word for JavaScript</button>
+    <button id="wrong6">4. Not sure!</button>
 </div>
 </div>
 <!--Question 3 Card-->
 <div id="question3-container" class="hide">
-<div id="question3">Question: What does JS stand for?</div>
+<div id="question3">Question: What does JS stand for in programming?</div>
 <div id="answer-button" class="button-grid">
     <button id="wrong7">1. James Smith</button>
     <button id="correct3">2. Java Script</button>
@@ -62,7 +62,7 @@
     <button id="wrong10">1. 0 == "0"</button>
     <button id="wrong11">2. 0 == []</button>
     <button id="correct4">3. "0" == []</button>
-    <button id="correct4.5">4. This doesn't make sense</button>
+    <button id="correct45">4. This doesn't make sense</button>
 </div>
 </div>
 <!--Question 5 Card-->
@@ -75,18 +75,32 @@
     <button id="wrong15">4. HelloWorld</button>
 </div>
 </div>
-<!--Question 6 Card-->
-<div id="question6-container" class="hide">
-<button id="Restart">Restart</button>
-</div>
+<!--Restart Card-->
+<div id="final-container" class="hide">
+<div id="card-body" class="hide">
+<button id="redo" class="hide">Try Again?</button>
 
+    <div class="card">
+      <h2>Sign Up</h2>
+      <form>
+        <div class="input-group">
+          <label for="initials">Initials</label>
+          <input type="text" name="initials" id="initials" placeholder="AM" />
+        </div>
+        <div id="msg"></div>
+        <button id="submitBtn">Sumbit</button>
+      </form>
+    </div>
+    <div class="card2">
+      <h2>Last HighScore</h2>
+      <p><strong>Initials:</strong> <span id="user-initials"></span></p>
+      <p><strong>Score:</strong> <span id="user-score"></span></p>
+    </div>
+  </div>
+</div>
 </div>
 </div>
 <div id="Displaytime">Time: 75</div>
-<button id="redo" class="hide">Try Again?</button>
-
-
-
 <script src="script.js"></script>
 </body>
 </html>
