@@ -1,8 +1,6 @@
 const Displaytime = document.getElementById("Displaytime");
 const startBtn = document.getElementById("btnStart");
 const introPage = document.getElementById("intro");
-const correctAnswer = document.getElementsByClassName("correct"); //bug foudn here
-const wrongAnswer = document.getElementsByClassName("wrong"); //bug found here
 const textCorrect = document.getElementById("correct-text");
 const textWrong = document.getElementById("wrong-text");
 var timer = 75;
@@ -11,6 +9,7 @@ const QuestionContainer2 = document.getElementById("question2-container");
 const QuestionContainer3 = document.getElementById("question3-container");
 const QuestionContainer4 = document.getElementById("question4-container");
 const QuestionContainer5 = document.getElementById("question5-container");
+////////
 startBtn.addEventListener('click', StartQuiz);
 function StartQuiz(){
 startBtn.classList.add("hide");
@@ -20,6 +19,7 @@ timerCount();
 Question1();
 console.log("passing function in StartQuiz");
 }
+///////////////////////////////
 function Question1(){
     let CA1 = document.getElementById("correct1");
     let WA1 = document.getElementById("wrong1");
@@ -55,7 +55,7 @@ WA3.addEventListener('click', function(){
     console.log("testWA3")
 });
 }
-
+///////////////////////////////
 function Question2(){
     let CA2 = document.getElementById("correct2");
     let WA4 = document.getElementById("wrong4");
@@ -64,171 +64,142 @@ function Question2(){
 
     CA2.addEventListener('click', function(){
         correctText();
-        QuestionContainer1.classList.add("hide");
-        QuestionContainer2.classList.remove("hide");
+        QuestionContainer2.classList.add("hide");
+        QuestionContainer3.classList.remove("hide");
         Question3()
         console.log("testCA1")
     });
     WA4.addEventListener('click', function(){
         wrongText();
-        QuestionContainer1.classList.add("hide");
-        QuestionContainer2.classList.remove("hide");
+        QuestionContainer2.classList.add("hide");
+        QuestionContainer3.classList.remove("hide");
         Question3()
         console.log("testWA1")
     });
     WA5.addEventListener('click', function(){
     wrongText();
-    QuestionContainer1.classList.add("hide");
-    QuestionContainer2.classList.remove("hide");
+    QuestionContainer2.classList.add("hide");
+    QuestionContainer3.classList.remove("hide");
     Question3()
     console.log("testWA2")
     });
     WA6.addEventListener('click', function(){
     wrongText();
-    QuestionContainer1.classList.add("hide");
-    QuestionContainer2.classList.remove("hide");
+    QuestionContainer2.classList.add("hide");
+    QuestionContainer3.classList.remove("hide");
     Question3()
     console.log("testWA3")
     });
-
     }
-
-// function Question1(){
-//     var myFunction1 = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("correct Answer");
-//         correctText();
-//         QuestionContainer1.classList.add("hide");
-//         QuestionContainer2.classList.remove("hide");
-//         Question2()
-//     };
-//     for (let i = 0; i < correctAnswer.length; i++) {
-//         correctAnswer[i].addEventListener('click', myFunction1, false);
-//         console.log("loop checkC1")
-      
-//     }
-//     var myFunction1 = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("wrong answer")
-//         wrongText();
-//         QuestionContainer1.classList.add("hide");
-//         QuestionContainer2.classList.remove("hide");
-//         Question2()
-//     };
-//     for (let i = 0; i < wrongAnswer.length; i++) {
-//         wrongAnswer[i].addEventListener('click', myFunction1, false);
-//         console.log("loop checkW1")
+    ///////////////////////////////
+    function Question3(){
+        let CA3 = document.getElementById("correct3");
+        let WA7 = document.getElementById("wrong7");
+        let WA8 = document.getElementById("wrong8");
+        let WA9 = document.getElementById("wrong9");
+    
+        CA3.addEventListener('click', function(){
+            correctText();
+            QuestionContainer3.classList.add("hide");
+            QuestionContainer4.classList.remove("hide");
+            Question4()
+            console.log("testCA1")
+        });
+        WA7.addEventListener('click', function(){
+            wrongText();
+            QuestionContainer3.classList.add("hide");
+            QuestionContainer4.classList.remove("hide");
+            Question4()
+            console.log("testWA1")
+        });
+        WA8.addEventListener('click', function(){
+        wrongText();
+        QuestionContainer3.classList.add("hide");
+        QuestionContainer4.classList.remove("hide");
+        Question4()
+        console.log("testWA2")
+        });
+        WA9.addEventListener('click', function(){
+        wrongText();
+        QuestionContainer3.classList.add("hide");
+        QuestionContainer4.classList.remove("hide");
+        Question4()
+        console.log("testWA3")
+        });
+        }
+        ///////////////////////////////
+        function Question4(){
+            let CA4 = document.getElementById("correct4");
+            let CA45 = document.getElementById("correct4.5");
+            let WA10 = document.getElementById("wrong10");
+            let WA11 = document.getElementById("wrong11");
         
-//     }
-// }
- 
-///////////////////////////////////////////////////////////////////////////
-// function Question2(){
-//     textCorrect.classList.add("hide");
-//     textWrong.classList.add("hide");
-//     var myFunction = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("correct Answer");
-//         correctText();
-//         QuestionContainer2.classList.add("hide");
-//         QuestionContainer3.classList.remove("hide");
-//         Question3();
-//     }
-//     for (var i = 0; i < correctAnswer.length; i++) {
-//         correctAnswer[i].addEventListener('click', myFunction, false);
-//         console.log("loop checkC2")
-//     }
-//     var myFunction = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("wrong answer")
-//         wrongText();
-//         QuestionContainer2.classList.add("hide");
-//         QuestionContainer3.classList.remove("hide");
-//         Question3();
-//     };
-//     for (var i = 0; i < wrongAnswer.length; i++) {
-//         wrongAnswer[i].addEventListener('click', myFunction, false);
-//         console.log("loop checkW2")
-//     }
-// }
-///////////////////////////////////////////////////////////////////////////
-// function Question3(){
-//     var myFunction = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("correct Answer");
-//         correctText();
-//         QuestionContainer3.classList.add("hide");
-//         QuestionContainer4.classList.remove("hide");
-//         Question4();
-//     }
-//     for (var i = 0; i < correctAnswer.length; i++) {
-//         correctAnswer[i].addEventListener('click', myFunction, false);
-//         console.log("loop check")
-//     }
-//     var myFunction = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("wrong answer")
-//         wrongText();
-//         QuestionContainer3.classList.add("hide");
-//         QuestionContainer4.classList.remove("hide");
-//         Question4();
-//     };
-//     for (var i = 0; i < wrongAnswer.length; i++) {
-//         wrongAnswer[i].addEventListener('click', myFunction, false);
-//     }
-//         }
-///////////////////////////////////////////////////////////////////////////
-// function Question4(){
-//     var myFunction = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("correct Answer");
-//         correctText();
-//         QuestionContainer4.classList.add("hide");
-//         QuestionContainer5.classList.remove("hide");
-//         Question5();
-//     }
-//     for (var i = 0; i < correctAnswer.length; i++) {
-//         correctAnswer[i].addEventListener('click', myFunction, false);
-//         console.log("loop check")
-//     }
-//     var myFunction = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("wrong answer")
-//         wrongText();
-//         QuestionContainer4.classList.add("hide");
-//         QuestionContainer5.classList.remove("hide");
-//         Question5();
-//     };
-//     for (var i = 0; i < wrongAnswer.length; i++) {
-//         wrongAnswer[i].addEventListener('click', myFunction, false);
-//     }
-//         }
-///////////////////////////////////////////////////////////////////////////
-// function Question5(){
-//     var myFunction = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("correct Answer");
-//         correctText();
-//         QuestionContainer5.classList.add("hide");
-//         QuestionContainer3.classList.remove("hide");
-//         Final()
-//     }
-//     for (var i = 0; i < correctAnswer.length; i++) {
-//         correctAnswer[i].addEventListener('click', myFunction, false);
-//         console.log("loop check")
-//     }
-//     var myFunction = function() {
-//         var attribute = this.getAttribute("data-myattribute");
-//         console.log("wrong answer")
-//         wrongText();
-//         QuestionContainer5.classList.add("hide");
-//         QuestionContainer3.classList.remove("hide");
-//         Final()
-//     };
-//     for (var i = 0; i < wrongAnswer.length; i++) {
-//         wrongAnswer[i].addEventListener('click', myFunction, false);
-//     }
-//         }
+            CA4.addEventListener('click', function(){
+                correctText();
+                QuestionContainer4.classList.add("hide");
+                QuestionContainer5.classList.remove("hide");
+                Question5()
+                console.log("testCA1")
+            });
+            CA45.addEventListener('click', function(){
+                correctText();
+                QuestionContainer4.classList.add("hide");
+                QuestionContainer5.classList.remove("hide");
+                Question5()
+                console.log("testCA1")
+            });
+            WA10.addEventListener('click', function(){
+                wrongText();
+                QuestionContainer4.classList.add("hide");
+                QuestionContainer5.classList.remove("hide");
+                Question5()
+                console.log("testWA1")
+            });
+            WA11.addEventListener('click', function(){
+            wrongText();
+            QuestionContainer4.classList.add("hide");
+            QuestionContainer5.classList.remove("hide");
+            Question5()
+            console.log("testWA2")
+            });
+            }
+            ///////////////////////////////
+            function Question5(){
+                let CA5 = document.getElementById("correct5");
+                let WA13 = document.getElementById("wrong13");
+                let WA14 = document.getElementById("wrong14");
+                let WA15 = document.getElementById("wrong15");
+            
+                CA5.addEventListener('click', function(){
+                    correctText();
+                    QuestionContainer5.classList.add("hide");
+                    QuestionContainer2.classList.remove("hide");
+                    Final()
+                    console.log("testCA1")
+                });
+                WA13.addEventListener('click', function(){
+                    wrongText();
+                    QuestionContainer5.classList.add("hide");
+                    QuestionContainer2.classList.remove("hide");
+                    Final()
+                    console.log("testWA1")
+                });
+                WA14.addEventListener('click', function(){
+                wrongText();
+                QuestionContainer5.classList.add("hide");
+                QuestionContainer2.classList.remove("hide");
+                Final()
+                console.log("testWA2")
+                });
+                WA15.addEventListener('click', function(){
+                wrongText();
+                QuestionContainer5.classList.add("hide");
+                QuestionContainer2.classList.remove("hide");
+                Final()
+                console.log("testWA3")
+                });
+                }
+///////////////////////////////
 
 
 
