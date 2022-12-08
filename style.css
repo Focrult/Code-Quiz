@@ -20,6 +20,7 @@ body{
     align-items: center;
     text-align: center;
 }
+/*Each Question Header*/
 #question1-container,
 #question2-container,
 #question3-container,
@@ -27,11 +28,6 @@ body{
 #question5-container{
 font-size: 20px;
 font-weight: bold;
-
-
-}
-.hide{
-    display: none;
 }
 .button-grid{
     display: grid;
@@ -39,6 +35,7 @@ font-weight: bold;
     gap:10px;
     margin: 20px 0;
 }
+/*Each individual button*/
 #correct1,#correct2,#correct3,#correct4,#correct45,#correct5,
 #wrong1, #wrong2, #wrong3, #wrong4, #wrong5, 
 #wrong6, #wrong7, #wrong8, #wrong9, #wrong10, 
@@ -53,6 +50,7 @@ font-weight: bold;
     cursor: pointer;
     padding: 10px;
 }
+/*Each individual button*/
 #correct1:hover,#correct2:hover,#correct3:hover,
 #correct4:hover,#correct45:hover,#correct5:hover,
 #wrong1:hover, #wrong2:hover, #wrong3:hover, 
@@ -63,7 +61,9 @@ font-weight: bold;
     background-color: rgb(161, 1, 161);
     opacity: 75%;
 }
-
+.HT{/*Last HighScore header*/
+    text-decoration: underline;
+}
 .card2{
     bottom: 75%;
     left: 25%;
@@ -72,21 +72,41 @@ font-weight: bold;
     padding: 10px;
     position: absolute;
 }
-#submit-b{
+/*Initials input styling*/
+input {
+    background-color: #f1f3f4;
+    border-radius: 5px;
+    border-width: 0;
+    font-size: 1em;
+    height: 45px;
+    margin: 0;
+    margin-bottom: 5%;
+    max-width: 100%;
+    padding: 8px 8px 8px 8px;
+    width: 60%;
+  }
+  input:hover {
+    background-color: #e8eaed;
+  }
+/*submit button styling*/
+#submitBtn{
     background-color: rgb(23, 23, 102);
     border-radius: 10px;
-    width:30%;
+    width:25%;
     height: 75px;
     font-size: 20px;
     border: none;
-    color: grey;
     cursor: pointer;
     padding: 10px;
-    border: solid;
+    color:white;
+    font-size: 2rem;
+    transition: ease-in 300ms;
 }
-
-  
-  
+#submitBtn:hover{
+    background-color: rgb(161, 1, 161);
+    opacity: 75%;
+    transition: ease-in-out 300ms;
+}
 .hide{/*hide containers*/
     display: none;
 }

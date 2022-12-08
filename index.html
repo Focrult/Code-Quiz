@@ -16,75 +16,72 @@
     <div id="card-container" class="hide"></div>
     <div id="intro">
     <h1>Coding Quiz Challenge</h1>
-    <p class="introText">Try to answer the follow code-related questions within the time limit.
-         Keep in mind that the incorrect answers will penalise your score/time by ten seconds!</p>
+    <p class="introText">Try to answer the following code-related questions within the time limit!
+         Keep in mind that a single incorrect answer will penalise your time by ten seconds!</p>
     </div>
-   
     <button id="btnStart" class="start-Btn">Start Quiz</button>
     <div class="Question-Container">
-
-
 <!--Question 1 Card-->
 <section id="question1-container" class="hide">
-<div id="question1">Question: What is the DOM?</div>
-<div id="answer-button" class="button-grid">
+    <div id="question1">Question: What is the DOM?</div>
+    <div id="answer-button" class="button-grid">
     <button id="correct1">1. Document Object Model</button>
     <button id="wrong1">2. Documentation Objects Model</button>
     <button id="wrong2">3. TV series</button>
     <button id="wrong3">4. A city from LOTR</button>
-</div>
+    </div>
 </section>
 
 <!--Question 2 Card-->
 <section id="question2-container" class="hide">
-<div id="question2">What only has True and False statements?</div>
-<div id="answer-button" class="button-grid">
-    <button id="wrong4">1. Array</button>
-    <button id="correct2">2. Boolean</button>
-    <button id="wrong5">3. For Loop</button>
-    <button id="wrong6">4. console.log();</button>
-</div>
+    <div id="question2">Question: An Array is...</div>
+    <div id="answer-button" class="button-grid">
+    <button id="wrong4">1. A Boolean</button>
+    <button id="correct2">2. A collection of elements</button>
+    <button id="wrong5">3. A loop</button>
+    <button id="wrong6">4. A number</button>
+    </div>
 </section>
 <!--Question 3 Card-->
 <section id="question3-container" class="hide">
-<div id="question3">Question: What does JS stand for in programming?</div>
-<div id="answer-button" class="button-grid">
+    <div id="question3">Question: What does JS stand for in programming?</div>
+    <div id="answer-button" class="button-grid">
     <button id="wrong7">1. James Smith</button>
     <button id="correct3">2. Java Script</button>
     <button id="wrong8">3. Jerry Seinfeld</button>
     <button id="wrong9">4. Java Sip</button>
-</div>
+    </div>
 </section>
 <!--Question 4 Card-->
 <section id="question4-container" class="hide">
-<div id="question4">Question: Which one returns false?</div>
-<div id="answer-button" class="button-grid">
+    <div id="question4">Question: Which one returns false?</div>
+    <div id="answer-button" class="button-grid">
     <button id="wrong10">1. 0 == "0"</button>
     <button id="wrong11">2. 0 == []</button>
     <button id="correct4">3. "0" == []</button>
     <button id="correct45">4. This doesn't make sense</button>
-</div>
+    </div>
 </section>
 <!--Question 5 Card-->
 <section id="question5-container" class="hide">
-<div id="question5">Question: What is the output for this: ('b' + 'a' + + 'a' + 'a').toLowerCase();</div>
-<div id="answer-button" class="button-grid">
+    <div id="question5">Question: What is the output for this: ('b' + 'a' + + 'a' + 'a').toLowerCase();</div>
+    <div id="answer-button" class="button-grid">
     <button id="wrong13">1. baaa</button>
     <button id="wrong14">2. BAAA</button>
     <button id="correct5">3. banana</button>
     <button id="wrong15">4. HelloWorld</button>
-</div>
+    </div>
 </section>
 <!--Restart+End Card-->
 <section id="final-container" class="hide">
-<div id="card-body" class="hide">
-<button id="redo" class="hide">Try Again?</button>
-<p><strong>Your Score: </strong><span id="current-score"></span></p>
+    <div id="card-body" class="hide">
+    <button id="redo" class="hide">Try Again?</button>
+    <p><strong>Your Score: </strong><span id="current-score"></span>/5</p>
     <div class="card">
       <h2>Enter Initials</h2>
       <form>
         <div class="input-group">
-          <label for="initials">Initials</label>
+          <label for="initials"></label>
           <input type="text" name="initials" id="initials" placeholder="AM" />
         </div>
         <div id="msg"></div>
@@ -92,7 +89,9 @@
       </form>
     </div>
     <div class="card2">
-      <h2>Last HighScore</h2>
+    <header>
+    <h2 class="HT">Last HighScore</h2>
+    </header>
       <p><strong>Initials:</strong> <span id="user-initials"></span></p>
       <p><strong>Score:</strong> <span id="user-score"></span></p>
     </div>
